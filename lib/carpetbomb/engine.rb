@@ -1,4 +1,16 @@
 module CarpetBomb
+  class << self
+    attr_accessor :renderer
+  end
+
+  def self.configure
+    yield self
+  end
+
+  def self.render(&block)
+    self.renderer = block
+  end
+
   class Handler
 
     def initialize
@@ -6,18 +18,6 @@ module CarpetBomb
 
     def call(template)
       CarpetBomb.renderer.call(template.source).html_safe.inspect
-    end
-  end
-
-  class << self
-    def configure
-      yield self
-    end
-
-    attr_accessor :renderer
-
-    def render(&block)
-      self.renderer = block
     end
   end
 end
