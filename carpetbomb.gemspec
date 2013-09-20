@@ -13,4 +13,7 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split($/)
   s.require_path = %w[lib]
   s.license = 'MIT'
+
+  s.add_dependency "rails"
+  s.add_dependency "redcarpet"
 end
