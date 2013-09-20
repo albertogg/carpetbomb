@@ -14,6 +14,5 @@ Gem::Specification.new do |s|
   s.require_path = %w[lib]
   s.license = 'MIT'
 
-  s.add_dependency "rails"
-  s.add_dependency "redcarpet"
+  s.add_dependency "redcarpet", "~> 3.0.0"
 end
