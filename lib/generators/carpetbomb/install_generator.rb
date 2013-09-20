@@ -5,7 +5,7 @@ module CarpetBomb
       desc "Creates CarpetBomb Initializer for your application"
 
       def copy_initializer_file
-        copy_file "carpetbomb_initializer.rb", "config/initializers/carpetbomb.rb"
+        template "config/initializers/carpetbomb.rb"
 
         puts "Install complete!, check config/initializers/carpertbomb.rb"
       end
