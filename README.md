@@ -37,7 +37,7 @@ Remove the gem from the Gemfile, and run bundle.
 
 ## Usage
 
-This gem adds three posible markdown template handlers to the existing Rails
+This gem adds three posible markdown template extensions to the existing Rails
 template handlers:
 
 `.md`, `.mdown` and `.markdown` all of them will work and will be parsed first
@@ -45,10 +45,10 @@ with Ruby on Rails erb template, so you can add whatever erb syntax you want.
 After that it will be parsed by Redcarpet to handle the markdown part.
 
 It's really simple to start using markdown templates. Create a view or rename it
-to `viewname.html.md` and that's it.
+to whatever viewname you want `{viewname}.html.md` and that's it.
 ~~~erb
-# viewname.html.md
-<%= content_for :page_title, 'Ticketing - Index' %>
+# index.html.md
+<%= content_for :page_title, 'MyApp - Index' %>
 
 # Hi from the index page.
 
@@ -69,6 +69,7 @@ Just send a pull request!
 
 ## Thanks
 
-Thanks to Lindsey Bieda for [this tutorial](http://rarlindseysmash.com/posts/how-to-gem-like-jem).
-And to Joliss for her [markdown-rails](https://github.com/joliss/markdown-rails)
-I practically copied the core of gem.
+Thanks to Lindsey Bieda for [this
+tutorial](http://rarlindseysmash.com/posts/how-to-gem-like-jem) and to Joliss
+for her [markdown-rails](https://github.com/joliss/markdown-rails) I practically
+copied the core of gem.
