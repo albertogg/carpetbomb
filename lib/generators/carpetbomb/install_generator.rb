@@ -10,7 +10,7 @@ module Carpetbomb
       def copy_initializer
         template "carpetbomb.rb", "config/initializers/carpetbomb.rb"
 
-        puts "Carpetbomb is installed into config/initializers/carpetbomb.rb"
+        puts "Install complete! please check config/initializers/carpetbomb.rb to customize Redcarpet options."
       end
     end
   end

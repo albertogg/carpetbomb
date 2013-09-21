@@ -12,11 +12,12 @@ module Carpetbomb
   end
 
   class Handler
-
     def initialize
     end
 
     def call(template)
+      # If the template has any erb tags in it, they will be parsed first.
+      # then with the result we call redcarpet to parse the markdown template.
       erb = ActionView::Template.registered_template_handler(:erb)
       source = erb.call(template)
       <<-SOURCE
