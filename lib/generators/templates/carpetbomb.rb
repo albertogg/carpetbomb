@@ -1,3 +1,5 @@
+# config/initializers/carpetbomb.rb
+#
 CarpetBomb.configure do |config|
   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
                                           :autolink => true,
