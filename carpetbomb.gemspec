@@ -4,7 +4,7 @@ require File.expand_path('../lib/carpetbomb/version', __FILE__)
 
 Gem::Specification.new do |s|
   s.name = "carpetbomb"
-  s.version = CarpetBomb::VERSION
+  s.version = Carpetbomb::VERSION
   s.authors = ["albertogg"]
   s.email   = ["albertogrespan@gmail.com"]
   s.homepage = "https://github.com/albertogg/carpetbomb"

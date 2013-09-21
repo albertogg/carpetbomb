@@ -1,4 +1,4 @@
-module CarpetBomb
+module Carpetbomb
   module Generators
     class ConfigGenerator < Rails::Generators::Base
         puts "Hello from generator"

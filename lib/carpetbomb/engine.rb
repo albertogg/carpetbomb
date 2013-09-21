@@ -1,4 +1,4 @@
-module CarpetBomb
+module Carpetbomb
   class << self
     attr_accessor :renderer
   end
@@ -20,13 +20,13 @@ module CarpetBomb
       erb = ActionView::Template.registered_template_handler(:erb)
       source = erb.call(template)
       <<-SOURCE
-        CarpetBomb.renderer.call(begin;#{source};end).html_safe
+        Carpetbomb.renderer.call(begin;#{source};end).html_safe
       SOURCE
     end
   end
 end
 
-handler = CarpetBomb::Handler.new
+handler = Carpetbomb::Handler.new
 
 [:md, :mdown, :markdown].each do |extension|
   if defined? ActionView::Template and ActionView::Template.respond_to? :register_template_handler

@@ -1,3 +1,3 @@
-module CarpetBomb
-  VERSION = "0.0.9"
+module Carpetbomb
+  VERSION = "0.1.1"
 end
