@@ -11,17 +11,17 @@ It depends on Redcarpet v3.0.0.
 
 Add to your project Gemfile:
 ~~~sh
-gem 'carpetbomb'
+$ gem 'carpetbomb'
 ~~~
 
 Run the following command to install it:
 ~~~sh
-bundle install
+$ bundle install
 ~~~
 
 Run the generator:
 ~~~sh
-rails generate carpetbomb:install
+$ rails generate carpetbomb:install
 ~~~
 
 That's it.
@@ -30,7 +30,7 @@ That's it.
 
 Run the generator:
 ~~~sh
-rails generate carpetbomb:uninstall
+$ rails generate carpetbomb:uninstall
 ~~~
 
 Remove the gem from the Gemfile, and run bundle.
@@ -46,8 +46,9 @@ After that it will be parsed by Redcarpet to handle the markdown part.
 
 It's really simple to start using markdown templates. Create a view or rename it
 to whatever viewname you want `{viewname}.html.md` and that's it.
+
+***index.html.md***
 ~~~erb
-# index.html.md
 <%= content_for :page_title, 'MyApp - Index' %>
 
 # Hi from the index page.
