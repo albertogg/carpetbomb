@@ -1,5 +1,3 @@
-require 'rails/generators'
-
 module Carpetbomb
   module Generators
     class InstallGenerator < Rails::Generators::Base
