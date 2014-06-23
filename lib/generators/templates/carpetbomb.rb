@@ -6,6 +6,8 @@
 #
 # https://github.com/vmg/redcarpet
 #
+require 'redcarpet'
+
 Carpetbomb.configure do |config|
 
   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
