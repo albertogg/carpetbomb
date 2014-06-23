@@ -4,14 +4,11 @@
 
 ## Dependencies
 
-It depends on Redcarpet v3.0.0.
+It depends on Redcarpet v3.1
 
 ### Rails versions.
 
-As for the moment I've only tested this gem in Rails 4.0.0, and it works. I
-think it will also work in Rails 3.2.x with no problem. If you are using an
-older version of Rails and it doesn't work create an issue or submit a pull
-request I'll be happy to help.
+It works from Rails 4.1 to Rails 3.x.
 
 ## Installation
 
