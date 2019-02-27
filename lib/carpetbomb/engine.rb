@@ -15,13 +15,18 @@ module Carpetbomb
     def initialize
     end
 
-    def call(template)
+    def call(template, source = nil)
+      erb = ActionView::Template.registered_template_handler(:erb)
+      compiled_source = if source
+                          erb.call(template, source)
+                        else
+                          erb.call(template)
+                        end
+
       # If the template has any erb tags in it, they will be parsed first.
       # then with the result we call redcarpet to parse the markdown template.
-      erb = ActionView::Template.registered_template_handler(:erb)
-      source = erb.call(template)
       <<-SOURCE
-        Carpetbomb.renderer.call(begin;#{source};end).html_safe
+        Carpetbomb.renderer.call(begin;#{compiled_source};end).html_safe
       SOURCE
     end
   end
